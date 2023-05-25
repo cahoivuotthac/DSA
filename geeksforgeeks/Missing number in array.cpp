@@ -15,15 +15,3 @@ public:
     // However, this method can cause overflow if each num of the array is large enough.
 };
 
-// XOR method can solve this overflow problem, x^x=0
-class Solution
-{
-public:
-    int missingNumber(vector<int> &array, int n)
-    {
-        int missingnum = 0;
-        for(int i = 1; i < n; i++)
-            missingnum = i ^ array[i];
-        return missingnum;
-    }
-};
