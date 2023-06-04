@@ -11,12 +11,12 @@ struct List
     Node *pHead, *pTail;
 };
 
-void Init(List &l) //khởi tạo list
+void Init(List &l) 
 {
     l.pHead = l.pTail = NULL;
 }
 
-Node* GetNode(int data) //tạo 1 Node
+Node* GetNode(int data) //CreateNode
 {
     Node *p = new Node;
     if(p == NULL) return NULL;
@@ -36,9 +36,9 @@ void AddTail(List &l, Node* x)
        l.pTail = x;
     }
 }
-void InPut(List &l) // tuong đương thêm node cuối ds
+void InPut(List &l) // It likes addTail
 {
-    // khởi tạo 1 list rồi làm gì thì làm
+    // Must init a list first 
     Init(l);
 
     int n, data;
@@ -47,7 +47,7 @@ void InPut(List &l) // tuong đương thêm node cuối ds
     {
         cin >> data;
 
-        //đóng gói data vào 1 node => tạo 1 Node
+        //put data into Node
         Node *q;
         q = GetNode(data);
         AddTail(l, q);
